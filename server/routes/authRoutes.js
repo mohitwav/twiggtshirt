@@ -25,13 +25,13 @@ router.get(
           res.cookie("info", err.toString(), {
             maxAge: 1000 * 5,
           });
-          return res.redirect("http://localhost:3000/auth/login");
+          return res.redirect("https://twiggstore.netlify.app/auth/login");
         }
         if (info.message) {
           res.cookie("info", info.message.toString(), {
             maxAge: 1000 * 5,
           });
-          return res.redirect("http://localhost:3000/auth/login");
+          return res.redirect("https://twiggstore.netlify.app/auth/login");
         }
         if (user) {
           req.user = user;
@@ -53,7 +53,7 @@ router.get(
       httpOnly: true,
       sameSite: "Strict",
     });
-    res.redirect(`http://localhost:3000`);
+    res.redirect(`https://twiggstore.netlify.app`);
   }
 );
 
@@ -76,13 +76,13 @@ router.get(
           res.cookie("info", err.toString(), {
             maxAge: 1000 * 5,
           });
-          return res.redirect("http://localhost:3000/auth/login");
+          return res.redirect("https://twiggstore.netlify.app/auth/login");
         }
         if (info.message) {
           res.cookie("info", info.message.toString(), {
             maxAge: 1000 * 5,
           });
-          return res.redirect("http://localhost:3000/auth/login");
+          return res.redirect("https://twiggstore.netlify.app/auth/login");
         }
         if (user) {
           req.user = user;
@@ -104,7 +104,7 @@ router.get(
       httpOnly: true,
       sameSite: "Strict",
     });
-    res.redirect(`http://localhost:3000`);
+    res.redirect(`https://twiggstore.netlify.app`);
   }
 );
 
