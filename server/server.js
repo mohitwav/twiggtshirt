@@ -45,10 +45,10 @@ app.use(
 
 app.use(passport.initialize());
 
-app.use("/", authRoutes);
-app.use("/pizza", pizzaRoutes);
-app.use("/cart", cartRoutes);
-app.use("/orders", orderRoutes);
+app.use("/", require("./routes/authRoutes"));
+app.use("/pizza", require("./routes/pizzaRoutes"));
+app.use("/cart", require("./routes/cartRoutes"));
+app.use("/orders", require("./routes/orderRoutes"));
 
 app.listen(PORT, () => {
   console.log("Server is running!");
