@@ -25,13 +25,13 @@ router.get(
           res.cookie("info", err.toString(), {
             maxAge: 1000 * 5,
           });
-          return res.redirect("https://twiggstore.netlify.app/auth/login");
+          return res.redirect("https://twiggstore.netlify.app//auth/login");
         }
         if (info.message) {
           res.cookie("info", info.message.toString(), {
             maxAge: 1000 * 5,
           });
-          return res.redirect("https://twiggstore.netlify.app/auth/login");
+          return res.redirect("https://twiggstore.netlify.app//auth/login");
         }
         if (user) {
           req.user = user;

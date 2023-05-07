@@ -12,7 +12,8 @@ const UserSchema = new mongoose.Schema(
     email: {
       type: String,
       unique: true,
-      sparse: true,
+      default:null,
+      
       partialFilterExpression: { email: { $type: "string" } },
     },
     username: {
@@ -23,6 +24,8 @@ const UserSchema = new mongoose.Schema(
     },
     password: {
       type: String,
+      required:true,
+      default:null
     },
     avatar: {
       type: {
@@ -46,11 +49,12 @@ const UserSchema = new mongoose.Schema(
       type: String,
       enum: ["local", "google", "facebook"],
       required: true,
+      default:"local"
     },
     providers: {
       type: [String],
       required: true,
-      default: [],
+      default: ['local'],
     },
     google: {
       type: { id: String, picture: String, email: String, name: String },

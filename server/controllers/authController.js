@@ -41,6 +41,7 @@ module.exports = {
   },
   localLogin: async (req, res) => {
     passport.authenticate("local-login", (err, user, info) => {
+   
       if (err) {
         return res.status(500).json({ message: err });
       }
@@ -74,6 +75,7 @@ module.exports = {
           user,
           message: "User Logged-In successfully!",
         });
+        
       }
     })(req, res);
   },
